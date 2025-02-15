@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.main-box{
+    height: 80vh;
+}
+.tno{
+    width: 100px;
+}
+
+.container {
+    background: white;
+    padding: 70px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: rgba(18, 90, 74, 0.767);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.team-section, .score-section {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    min-width: 80px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #f1f1f1;
+}
+
+input::placeholder{
+    font-size: 15px;
+}
+input{
+    outline: solid rgba(0, 0, 0, 0.267) 2px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.mpower-section img{
+    width: 45px;
+    height: 45px;
+}
+.mpower-section{
+    padding: 35px;
+}
+.mpower-section h3{
+    margin-top: 7px;
+    font-weight: 650;
+    background: linear-gradient(60deg,#17a2b8,#28a745);
+    background-clip: text;
+    color: transparent;
+}
+.mpower-section p{
+    margin-top: 35px;
+    font-weight: 550;
+    font-size: 13px;
+    margin-left: -45px;
+    color: rgba(0, 0, 0, 0.493);
+}
