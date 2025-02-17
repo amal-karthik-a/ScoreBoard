@@ -8,57 +8,128 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="logoimg.jpg">
     <link rel="stylesheet" href="styles.css">
+    <scrpt type="module" src="rejister.js" defer></script>
 </head>
 <body>
-    <div class="mpower-section">
-        <div class="d-flex">
-            <img src="logopn.png">
-            <h3>Enigma</h3>
-            <p>Decoding the depths of unseen</p>
+
+    <nav id="navbar-cont" class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="mpower-section">
+            <div class="d-flex">
+                <img src="logopn.png">
+                <h3>Enigma</h3>
+                <p>Decoding the depths of unseen</p>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto" id="link-option">
+            <a class="nav-link active text-right" href="#">History<span class="sr-only">(current)</span></a>
+            <a class="nav-link active text-right" href="#">About<span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+    </nav>
+
+    <div id="sectionBoard">
+        <div class="main-box d-flex justify-content-center align-items-center">
+            <div class="container">
+                <h2 class="cont-hd">Scoreboard</h2>
+    
+                <div class="team-section text-left">
+                    <p class="at-hd">Add Team</p>
+                    <input class="tno" type="number" id="teamNo" placeholder="Team No">
+                    <input class="tname" type="text" id="teamName" placeholder="Team Name">
+                    <button class="btn btn-info" onclick="addTeam()">Add Team</button>
+                </div>                
+                
+                <div class="Update-sec text-left">
+                    <div class="score-section">
+                        <p class="at-hd">Update Score</p>
+                        <select id="teamSelect">
+                            <option value="" disabled selected>Select Team</option>
+                        </select>
+                        <input type="number" id="scoreInput" placeholder="Enter Points">
+                        <button class="btn btn-success" onclick="updateScore()">Update Score</button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="scoreboard">
+                            <thead>
+                                <tr id="headerRow">
+                                    <th>Teams</th>
+                                </tr>
+                            </thead>
+                            <tbody id="scoreBody"></tbody>
+                            <tfoot>
+                                <tr id="totalRow">
+                                    <td>Total</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="btns-close text-right">
+                    <button class="btn btn-danger btns-close">Logout</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="main-box d-flex">
-        <div class="container">
-            <h2>Scoreboard</h2>
 
-            <!-- Add Team Section -->
-            <div class="team-section">
-                <input class="tno" type="number" id="teamNo" placeholder="Team No">
-                <input class="tname" type="text" id="teamName" placeholder="Team Name">
-                <button class="btn btn-info" onclick="addTeam()">Add Team</button>
-            </div>
-
-            <!-- Update Score Section -->
-            
-            <div class="Update-sec">
-                <div class="score-section">
-                    <select id="teamSelect">
-                        <option value="" disabled selected>Select Team</option>
-                    </select>
-                    <input type="number" id="scoreInput" placeholder="Enter Points">
-                    <button class="btn btn-success" onclick="updateScore()">Update Score</button>
-                </div>
-    
-                <!-- Scoreboard Table -->
-                <div class="table-container">
-                    <table id="scoreboard">
-                        <thead>
-                            <tr id="headerRow">
-                                <th>Teams</th>
-                            </tr>
-                        </thead>
-                        <tbody id="scoreBody"></tbody>
-                        <tfoot>
-                            <tr id="totalRow">
-                                <td>Total</td>
-                            </tr>
-                        </tfoot>
-                    </table>
+    <div id="sectionLogin">
+        <div class="main-box d-flex justify-content-center align-items-center">
+            <div class="option">
+                <div class="btns-cover d-flex flex-column">
+                    <button onclick="display('sectionLogin')" class="btn btn-info btn1">Open Previous</button>
+                    <button onclick="display('sectionSignup')" class="btn btn-success btn2">Add new</button>
                 </div>
             </div>
+            <div class="login-container">
+                <h2 class="login-hd">Open the previous Score Board</h2>
+                <form class="d-flex flex-column">
+                    <div class="val text-left">
+                        <label>User Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="val text-left">
+                        <label>Password</label>
+                        <input class="passwd" type="password">
+                    </div>
+                </form>
+                
+                <div class="btns-cover">
+                    <button class="btn btn-info">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <div id="sectionSignup">
+        <div class="main-box d-flex justify-content-center align-items-center">
+            <div class="option">
+                <div class="btns-cover d-flex flex-column">
+                    <button onclick="display('sectionLogin')" class="btn btn-info btn1">Open Previous</button>
+                    <button onclick="display('sectionSignup')" class="btn btn-success btn2">Add new</button>
+                </div>
+            </div>
+            <div class="login-container">
+                <h2 class="login-hd">Start a new Score Board</h2>
+                <form class="d-flex flex-column">
+                    <div class="val text-left">
+                        <label>User Name</label>
+                        <input type="email" id="email" maxlength="25">
+                    </div>
+                    <div class="val text-left">
+                        <label>Password</label>
+                        <input class="passwd" id="password" type="password" maxlength="16">
+                    </div>
+                    <div class="btns-cover">
+                         <button id="submit" class="btn btn-info">Create</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 

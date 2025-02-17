@@ -1,15 +1,18 @@
+*{
+    user-select: none;
+    transition: 0.3s;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
 }
 .main-box{
-    height: 80vh;
+    height: 100vh;
 }
 .tno{
     width: 100px;
 }
-
 .container {
     background: white;
     padding: 70px;
@@ -67,7 +70,7 @@ tfoot {
 input::placeholder{
     font-size: 15px;
 }
-input{
+.team-section input , .score-section input{
     outline: solid rgba(0, 0, 0, 0.267) 2px;
     border: 0;
     border-radius: 10px;
@@ -78,7 +81,7 @@ input{
     height: 45px;
 }
 .mpower-section{
-    padding: 35px;
+    padding: 10px 0px;
 }
 .mpower-section h3{
     margin-top: 7px;
@@ -93,4 +96,87 @@ input{
     font-size: 13px;
     margin-left: -45px;
     color: rgba(0, 0, 0, 0.493);
+}
+.login-container{
+    background-color: white;
+    border-radius: 5px;
+    padding: 35px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.26);
+    background: inear-gradient(60deg,rgba(72, 218, 210, 0.336),rgba(109, 191, 238, 0.24));
+}
+.login-container input{
+    border: 0;
+    outline: solid rgba(0, 0, 0, 0.267) 2px;
+    border-radius: 10px;
+}
+form{
+    max-width: 100%;
+}
+.login-hd{
+    margin-bottom: 35px;
+    color: #00000056;
+}
+.val input{
+    width: 95% !important;
+    margin-bottom: 22px;
+    color: rgba(47, 51, 49, 0.575);
+    font-size: 15px;
+    font-weight: 550;
+}
+.passwd{
+    letter-spacing: 10px;
+}
+.val label{
+    margin-left: 10px;
+    margin-bottom: -1px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Roboto";
+    background: rgba(59, 160, 160, 0.26);
+    padding: 5px;
+    border-radius: 6px;
+}
+.btns-cover button{
+    font-size: 12.5px;
+}
+.option{
+    /*backgrund: linear-gradient(60deg,rgba(72, 218, 210, 0.336),rgba(109, 191, 238, 0.24));*/
+    margin-top: -284px;
+    border-radius: 6px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.26);
+    background-color: white;
+}
+.btns button{
+    margin-bottom: -10px;
+    font-size: 13px;
+}
+#link-option{
+    font-weight: bold;
+    font-size: 14.5px;
+}
+#link-option a{
+    color: rgba(30, 160, 110, 0.822);
+}
+#navbar-cont{
+    position: absolute;
+    width: 100%;
+}
+.cont-hd{
+    margin-bottom: 40px;
+}
+.at-hd{
+    margin-left: 10px;
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.63);
+    margin-top: 37px;
+}
+.add-icon{
+    width: 25px;
+}
+.btns-close{
+    font-size: 12px;
+    margin-top: 35px;
 }
