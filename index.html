@@ -33,6 +33,34 @@
         </div>
     </nav>
 
+    <div id="sectionLogin">
+        <div class="main-box d-flex justify-content-center align-items-center">
+            <div class="option">
+                <div class="btns-cover d-flex flex-column">
+                    <button onclick="display('sectionLogin')" class="btn btn-info btn1">Open Previous</button>
+                    <button onclick="display('sectionSignup')" class="btn btn-success btn2">Add new</button>
+                </div>
+            </div>
+            <div class="login-container">
+                <h2 class="login-hd">Open the previous Score Board</h2>
+                <form class="d-flex flex-column">
+                    <div class="val text-left">
+                        <label>User Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="val text-left">
+                        <label>Password</label>
+                        <input class="passwd" type="password">
+                    </div>
+                </form>
+                
+                <div class="btns-cover">
+                    <button onclick="display('sectionBoard')" class="btn btn-info">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="sectionBoard">
         <div class="main-box d-flex justify-content-center align-items-center">
             <div class="container">
@@ -73,34 +101,6 @@
                 </div>
                 <div class="btns-close text-right">
                     <button class="btn btn-danger btns-close">Logout</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="sectionLogin">
-        <div class="main-box d-flex justify-content-center align-items-center">
-            <div class="option">
-                <div class="btns-cover d-flex flex-column">
-                    <button onclick="display('sectionLogin')" class="btn btn-info btn1">Open Previous</button>
-                    <button onclick="display('sectionSignup')" class="btn btn-success btn2">Add new</button>
-                </div>
-            </div>
-            <div class="login-container">
-                <h2 class="login-hd">Open the previous Score Board</h2>
-                <form class="d-flex flex-column">
-                    <div class="val text-left">
-                        <label>User Name</label>
-                        <input type="text">
-                    </div>
-                    <div class="val text-left">
-                        <label>Password</label>
-                        <input class="passwd" type="password">
-                    </div>
-                </form>
-                
-                <div class="btns-cover">
-                    <button class="btn btn-info">Login</button>
                 </div>
             </div>
         </div>
